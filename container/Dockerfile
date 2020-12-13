@@ -7,14 +7,17 @@ EXPOSE 8501
 
 WORKDIR /app
 COPY container/requirements.txt .
+COPY utils .
+COPY app.py .
+COPY .aws .
 
 RUN pip install --upgrade pip
 RUN pip install streamlit
 RUN pip install -r requirements.txt
 RUN pip install opencv-python
 
-COPY app.py .
-COPY classify.py .
-COPY ./MNIST/mnist_model ./MNIST/mnist_model
+ENV AWS_CONFIG_FILE=/app/.aws/config 
+ENV AWS_SHARED_CREDENTIALS_FILE=/app/.aws/credentials
+
 ENTRYPOINT [ "streamlit", "run"]
 CMD ["app.py"]

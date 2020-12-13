@@ -32,5 +32,7 @@ model.compile(optimizer='rmsprop',
 model.fit(train_images, train_labels, epochs=5, batch_size=64)
 
 test_loss, test_acc = model.evaluate(test_images, test_labels)
-
-model.save('mnist_model')
+model.save('mnist_model.h5')
+json_model = model.to_json()
+with open('mnist_model.json', 'w') as json_file:
+    json_file.write(json_model)

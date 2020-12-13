@@ -12,11 +12,4 @@ def predict(image, model):
     img = img.reshape(1,28,28,1)
     img /= 255
 
-    # img = np.expand_dims(image, axis=0)
-    #img = load_img(image, color_mode='grayscale', target_size=(28, 28, 1))
-    # convert the image pixels to a numpy array
-    # img = img_to_array(img)
-    # reshape data for the model
-    # img = image.reshape((1, 28, 28, 1))
-    # predict
     return model.predict_classes(img) 
