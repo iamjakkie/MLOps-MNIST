@@ -4,4 +4,4 @@
 
 ![erd](/doc/erd.png)
 
-![dashboard](/doc/dashboard.png)
+![dashboard](/doc/dashboard.PNG)
