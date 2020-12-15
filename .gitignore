@@ -132,3 +132,4 @@ dmypy.json
 # custom
 */img
 .aws
+MNIST handwritten digit recognizer.pdf
