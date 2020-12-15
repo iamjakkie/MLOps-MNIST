@@ -9,7 +9,7 @@ docker build . -t mnist-streamlit -f .\container\Dockerfile
 ## Running
 Usage:
 ```
-docker run -it -p 8501:8501 -v ${PWD}:/app mnist-streamlit
+docker run -it -p 8501:8501 mnist-streamlit
 ```
 
 ### Output
