@@ -1,3 +1,5 @@
+    """Main script to train and save the mnist model
+    """
 import keras
 from keras import layers
 from keras import models

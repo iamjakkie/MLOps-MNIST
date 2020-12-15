@@ -4,6 +4,7 @@ from keras.models import load_model
 from utils.aws_utils import get_model, test
 from utils.classify import predict
 
+
 def refresh_model():
     return load_model(get_model('mlops-mnist', 'MNIST/mnist_model.h5'))
 
@@ -15,7 +16,7 @@ def run_prediction():
             st.write("You did not upload a correct image")
         else:
             img = Image.open(uploaded_img)
-            st.image(img, use_column_width=True)
+            st.image(img)
             st.header("Predicted value on image: {}".format(predict(img, model)[0]))
 
 def get_prev_predictions(login):

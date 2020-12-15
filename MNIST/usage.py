@@ -1,8 +1,10 @@
+    """Simple script to validate mnist_model saved
+    """
 from keras.models import load_model
 import numpy as np
 from keras.preprocessing import image
 
-model = load_model('mnist_model')
+model = load_model('mnist_model.h5')
 
 
 # load img - keras

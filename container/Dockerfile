@@ -12,9 +12,7 @@ COPY app.py .
 COPY .aws .
 
 RUN pip install --upgrade pip
-RUN pip install streamlit
 RUN pip install -r requirements.txt
-RUN pip install opencv-python
 
 ENV AWS_CONFIG_FILE=/app/.aws/config 
 ENV AWS_SHARED_CREDENTIALS_FILE=/app/.aws/credentials
