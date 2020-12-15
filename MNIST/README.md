@@ -1,5 +1,6 @@
 # MNIST training Docker image
 
+This Dockerfile has been downloaded from: https://hub.docker.com/r/gw000/keras 
 ## Building
 ```
 cd <container path>
